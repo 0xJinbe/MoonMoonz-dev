@@ -278,6 +278,10 @@
     font-size: 3rem;
   }
 
+  .image-4 {
+    max-width: 60%;
+  }
+
   .image-5 {
     width: 30px;
     height: 30px;

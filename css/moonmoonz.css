@@ -231,10 +231,9 @@
 
 .container.mintcontainer {
   height: 100%;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .buttonstake {
@@ -322,7 +321,7 @@
 .mintpopup {
   position: absolute;
   left: auto;
-  top: auto;
+  top: 100px;
   right: auto;
   bottom: auto;
   display: none;
@@ -335,7 +334,7 @@
   background-color: #000;
 }
 
-.heading {
+.pricevalues {
   font-family: bmg3, sans-serif;
   color: #fff;
   font-size: 3rem;
@@ -350,12 +349,53 @@
   color: hsla(0, 0%, 100%, 0.8);
 }
 
-.text-block {
+.pricetextheading {
   font-family: bmg3, sans-serif;
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 2rem;
   line-height: 1.5;
   text-align: center;
+}
+
+.quantityvalues {
+  font-family: bmg3, sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.buttonmintaction {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  border-radius: 20px;
+  background-color: transparent;
+  font-family: bmg3, sans-serif;
+  text-transform: uppercase;
+}
+
+.buttonmintaction:hover {
+  background-color: hsla(0, 0%, 100%, 0.9);
+  color: #000;
 }
 
 @media screen and (max-width: 991px) {
@@ -474,6 +514,13 @@
     -webkit-flex: 0 auto;
     -ms-flex: 0 auto;
     flex: 0 auto;
+  }
+
+  .buttonmintaction {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 }
 

@@ -196,6 +196,7 @@
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 5rem;
   line-height: 1;
+  text-align: center;
 }
 
 .buttonwrapper {
@@ -590,6 +591,10 @@
   .mintpopup {
     width: 80vw;
   }
+
+  .stakeassetsbox {
+    width: 90vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -706,6 +711,10 @@
     flex: 0 auto;
   }
 
+  .pricetextheading {
+    font-size: 1rem;
+  }
+
   .buttonmintaction {
     margin-right: 0px;
     margin-bottom: 10px;
@@ -734,10 +743,14 @@
   }
 
   .homebutton {
+    position: absolute;
+    left: 0.5vw;
+    top: 6vh;
+    z-index: 5;
     margin-right: 0px;
     margin-bottom: 10px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 

@@ -204,7 +204,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 600px;
+  width: 800px;
   min-width: auto;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
@@ -582,6 +582,10 @@
 }
 
 @media screen and (max-width: 991px) {
+  .buttonwrapper {
+    width: 750px;
+  }
+
   .heroimage {
     top: auto;
     width: 250px;
@@ -687,6 +691,7 @@
 
   .buttonmarket {
     margin-right: 0px;
+    margin-bottom: 10px;
     padding-right: 50px;
     padding-left: 50px;
   }

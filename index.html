@@ -119,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            <div x-data="{ count: 0 }" class="mintpopup">
+            <div class="mintpopup">
                 <div class="container mintcontainer w-container">
                     <h1 class="heroheading">
                         <strong class="bold-text">MoonMoonz</strong>
@@ -143,7 +143,7 @@
                             <strong class="bold-text-2">/ 5555</strong>
                         </h1>
                     </div>
-                    <div class="counterwrapper">
+                    <div x-data="{ count: 0 }" class="counterwrapper">
                         <a
                             x-on:click="count++"
                             id="up"

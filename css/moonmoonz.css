@@ -4,6 +4,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   -webkit-box-orient: vertical;
@@ -192,6 +193,8 @@
 }
 
 .heroheading {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: bmg3, sans-serif;
   color: hsla(0, 0%, 100%, 0.8);
   font-size: 5rem;
@@ -239,10 +242,13 @@
 }
 
 .container.mintcontainer {
-  height: 100%;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .container.stake {
@@ -329,18 +335,19 @@
 
 .innerbuttonwrapper {
   width: 180px;
+  margin-bottom: 0px;
 }
 
 .mintpopup {
   position: absolute;
   left: auto;
-  top: 100px;
+  top: 66px;
   right: auto;
   bottom: auto;
   z-index: 100;
   display: none;
-  width: 70vw;
-  height: 80vh;
+  width: 80vw;
+  height: 35rem;
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
@@ -349,6 +356,8 @@
 }
 
 .pricevalues {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: bmg3, sans-serif;
   color: #fff;
   font-size: 3rem;
@@ -372,6 +381,8 @@
 }
 
 .quantityvalues {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-family: bmg3, sans-serif;
   color: #fff;
   font-size: 3rem;
@@ -588,7 +599,8 @@
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  height: 5rem;
+  height: 3rem;
+  margin-bottom: 10px;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -627,11 +639,11 @@
 .countervalue {
   font-family: bmg3, sans-serif;
   color: #fff;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
-.absolutecontentwrapper {
+.contentwrapper {
   position: absolute;
   left: 0%;
   top: 0%;

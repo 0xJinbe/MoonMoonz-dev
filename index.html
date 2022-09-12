@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="mintpopup">
+      <div x-data="{ count: 0 }" class="mintpopup">
         <div class="container mintcontainer w-container">
           <h1 class="heroheading">
             <strong class="bold-text">MoonMoonz</strong>
@@ -126,11 +126,11 @@
             </h1>
           </div>
           <div class="counterwrapper">
-            <a id="up" href="#" class="buttoncounterup w-button"
+            <a x-on:click="count++" id="up" href="#" class="buttoncounterup w-button"
               ><strong>+</strong></a
             >
-            <h1 id="counterValue" class="countervalue">0</h1>
-            <a id="down" href="#" class="buttoncounterdown w-button"
+            <span x-text="count" class="countervalue"></span>
+            <a x-on:click="count--" id="down" href="#" class="buttoncounterdown w-button"
               ><strong>-</strong></a
             >
           </div>

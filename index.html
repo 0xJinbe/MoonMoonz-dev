@@ -119,7 +119,7 @@
               <strong class="bold-text-2">0.0088 Ξ</strong>
             </h1>
           </div>
-          <div x-data="{ mintedValue: '12' }" class="mintquantitywrapper">
+          <div x-data="{ mintedValue: mockMintedValue}" class="mintquantitywrapper">
             <div class="pricetextheading">minted</div>
             <h1 id="quantityValues" class="quantityvalues">
               <strong x-text="mintedValue" class="bold-text-2"></strong>
@@ -130,7 +130,8 @@
             <a x-on:click="count++" id="up" href="#" class="buttoncounterup w-button"
               ><strong>+</strong></a
             >
-            <span x-text="count" class="countervalue"></span>
+            <span id="counterValue" x-text="count" class="countervalue"></span>
+
             <a x-on:click="count--" id="down" href="#" class="buttoncounterdown w-button"
               ><strong>-</strong></a
             >
@@ -170,6 +171,13 @@
         counter.innerText = counterState -= 1;
       });
     </script> -->
+    <script>
+      //mint quantity input value
+      const counterValue = document.getElementById("counterValue");
+      //js obj that receives data from ether function and render on minted quantity div x / 5555
+      const mockMintedValue = 5555;
+    </script>
+
     <script>
       //alert on click for dev purposes
       $(document).ready(function () {

@@ -119,10 +119,11 @@
               <strong class="bold-text-2">0.0088 Ξ</strong>
             </h1>
           </div>
-          <div class="mintquantitywrapper">
+          <div x-data="{ mintedValue: '12' }" class="mintquantitywrapper">
             <div class="pricetextheading">minted</div>
             <h1 id="quantityValues" class="quantityvalues">
-              <strong class="bold-text-2">0 / 5555</strong>
+              <strong x-text="mintedValue" class="bold-text-2"></strong>
+              <strong class="bold-text-2">/ 5555</strong>
             </h1>
           </div>
           <div class="counterwrapper">
@@ -157,7 +158,7 @@
 
     <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
     <!-- <script>
-      //counter configs
+      //counter configs using js
       let counter = document.getElementById("counterValue");
       let counterState = Number(counter.innerText);
       const increaseButton = document.getElementById("up");
@@ -170,7 +171,7 @@
       });
     </script> -->
     <script>
-      //alert on click
+      //alert on click for dev purposes
       $(document).ready(function () {
         $("#connect-wallet").click(function () {
           alert("clicked");

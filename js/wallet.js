@@ -28,3 +28,4 @@ if (window.ethereum) {
 	$("#connect-wallet").click(connect);
 	$("#buttonMintAction").click(mint);
 }
+export { moonMoonz, connect, mint, provider, signer }; 

@@ -190,37 +190,25 @@
         <script src="//unpkg.com/alpinejs" defer></script>
 
         <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-        <!-- <script>
-      //counter configs using js
-      let counter = document.getElementById("counterValue");
-      let counterState = Number(counter.innerText);
-      const increaseButton = document.getElementById("up");
-      const decreaseButton = document.getElementById("down");
-      increaseButton.addEventListener("click", () => {
-        counter.innerText = counterState += 1;
-      });
-      decreaseButton.addEventListener("click", () => {
-        counter.innerText = counterState -= 1;
-      });
-    </script> -->
+        
         <script>
             //mint quantity input value
             const counterValue = document.getElementById("counterValue");
             //js obj that receives data from ether function and render on minted quantity div x / 5555
             const mockMintedValue = 5555;
+            //import wallet vars
+            
         </script>
-
         <script>
-            //alert on click for dev purposes
-            $(document).ready(function () {
-                $("#connect-wallet").click(function () {
-                    alert("clicked");
-                });
-
+			//alert on click for dev purposes
+			$(document).ready(function () {
+				$("#connect-wallet").click(function () {
+					alert("clicked");
+				});
                 $("#buttonMintAction").click(function () {
-                    alert("clicked");
-                });
-            });
-        </script>
+					alert("clicked");
+				});
+			});
+		</script>
     </body>
 </html>

@@ -210,13 +210,12 @@
             document
                 .getElementById("connect-wallet")
                 .addEventListener("click", (event) => {
-                    let account;
-                    ethereum.request(
-                        { method: "eth_requestAccouts" }.then((accounts) => {
-                            account = accounts[0];
-                            console.log(account);
-                        })
-                    );
+                    async () => {
+                        await provider.send("eth_requestAccounts", []);
+
+                        const addr = await signer.getAddress();
+                        $("#connect-wallet").text(addr.substring(0, 9) + "...");
+                    };
                 });
         </script>
     </body>

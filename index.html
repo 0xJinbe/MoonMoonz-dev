@@ -67,7 +67,6 @@
                         <button
                             id="connect-wallet"
                             class="buttonwallet w-button"
-                            onclick="alertConnectWallet()"
                         >
                             Connect Wallet
                         </button>
@@ -208,7 +207,17 @@
                 alert("alert ativado!");
             }
 
-            
+            document
+                .getElementById("connect-wallet")
+                .addEventListener("click", (event) => {
+                    let account;
+                    ethereum.request(
+                        { method: "eth_requestAccouts" }.then((accounts) => {
+                            account = accounts[0];
+                            console.log(account);
+                        })
+                    );
+                });
         </script>
     </body>
 </html>

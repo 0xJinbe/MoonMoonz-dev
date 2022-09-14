@@ -67,6 +67,7 @@
                         <button
                             id="connect-wallet"
                             class="buttonwallet w-button"
+                            onclick="alertConnectWallet()"
                         >
                             Connect Wallet
                         </button>
@@ -205,11 +206,6 @@
             function alertConnectWallet() {
                 alert("alert ativado!");
             }
-            //calling connect button with jquery
-            $(document).ready(function () {
-                $("#connect-wallet").click(connect);
-            });
-
             //----------------------
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();

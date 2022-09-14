@@ -22,17 +22,6 @@
                         (n.className += t + "touch");
             })(window, document);
         </script>
-        <script>
-            //mock data of minted values
-            const mockMintedValue = 5555;
-
-            //mint quantity input value
-            const counter = document.getElementById("counter");
-            console.log(counter); // entire span tag
-            //span value return
-            const counterValue = counter.textContent;
-            console.log(counterValue);
-        </script>
         <link
             href="images/favicon.png"
             rel="shortcut icon"
@@ -74,17 +63,9 @@
                                 class="icon"
                         /></a>
                     </div>
-                    <script type="module">
-                        import connect from "./wallet.js";
-                        function connectF() {
-                            return connect;
-                        }
-                    </script>
+
                     <div class="rightupperwrapper">
-                        <a
-                            id="connect-wallet"
-                            onclick="connectF()"
-                            class="buttonwallet w-button"
+                        <a id="connect-wallet" class="buttonwallet w-button"
                             >Connect Wallet</a
                         >
                     </div>
@@ -160,25 +141,13 @@
                             <strong class="bold-text-2">/ 5555</strong>
                         </h1>
                     </div>
-                    <div x-data="{ count: 0 }" class="counterwrapper">
-                        <a
-                            x-on:click="count++"
-                            id="up"
-                            href="#"
-                            class="buttoncounterup w-button"
+                    <div class="counterwrapper">
+                        <a id="up" href="#" class="buttoncounterup w-button"
                             ><strong>+</strong></a
                         >
-                        <span
-                            id="counter"
-                            x-text="count"
-                            class="countervalue"
-                        ></span>
+                        <h1 id="counterValue" class="countervalue">0</h1>
 
-                        <a
-                            x-on:click="count--"
-                            id="down"
-                            href="#"
-                            class="buttoncounterdown w-button"
+                        <a id="down" href="#" class="buttoncounterdown w-button"
                             ><strong>-</strong></a
                         >
                     </div>
@@ -207,7 +176,26 @@
         <script src="//unpkg.com/alpinejs" defer></script>
         <script src="js/wallet.js" type="text/javascript"></script>
         <script src="js/constants.js" type="text/javascript"></script>
-
         <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+        <script>
+            //mock data of minted values
+            const mockMintedValue = 0;
+
+            //counter configs vanilla JS
+            let counter = document.getElementById("counterValue");
+            let counterState = Number(counter.innerText);
+            console.log(counter.textContent);
+
+            const increaseButton = document.getElementById("up");
+            const decreaseButton = document.getElementById("down");
+            increaseButton.addEventListener("click", () => {
+                counter.innerText = counterState += 1;
+                console.log(counter.textContent);
+            });
+            decreaseButton.addEventListener("click", () => {
+                counter.innerText = counterState -= 1;
+                console.log(counter.textContent);
+            });
+        </script>
     </body>
 </html>

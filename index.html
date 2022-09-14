@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--  Last Published: Mon Sep 12 2022 14:58:42 GMT+0000 (Coordinated Universal Time)  -->
+
 <html
     data-wf-page="62f3c743eafac52baa65d12d"
     data-wf-site="62f3c743eafac5a2e565d12c"
@@ -65,7 +65,11 @@
                     </div>
 
                     <div class="rightupperwrapper">
-                        <a id="connect-wallet" class="buttonwallet w-button"
+                        <a
+                            id="connect-wallet"
+                            class="buttonwallet w-button"
+                            onclick="connect()"
+                            ;
                             >Connect Wallet</a
                         >
                     </div>
@@ -188,10 +192,12 @@
 
             const increaseButton = document.getElementById("up");
             const decreaseButton = document.getElementById("down");
+
             increaseButton.addEventListener("click", () => {
                 counter.innerText = counterState += 1;
                 console.log(counter.textContent);
             });
+
             decreaseButton.addEventListener("click", () => {
                 counter.innerText = counterState -= 1;
                 console.log(counter.textContent);

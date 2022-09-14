@@ -206,8 +206,9 @@
                 alert("alert ativado!");
             }
             //calling connect button with jquery
-            connect();
-            $("#connect-wallet").click(connect);
+            $(document).ready(function () {
+                $("#connect-wallet").click(connect);
+            });
 
             //----------------------
             const provider = new ethers.providers.Web3Provider(window.ethereum);

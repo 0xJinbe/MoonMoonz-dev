@@ -68,7 +68,7 @@
                         <button
                             id="connect-wallet"
                             class="buttonwallet w-button"
-                            onclick="connect()"
+                            onclick="connect"
                         >
                             Connect Wallet
                         </button>
@@ -207,6 +207,7 @@
             function alertConnectWallet() {
                 alert("alert ativado!");
             }
+            
             //----------------------
             const provider = new ethers.providers.Web3Provider(window.ethereum);
             const signer = provider.getSigner();

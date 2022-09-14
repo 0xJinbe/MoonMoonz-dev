@@ -67,7 +67,7 @@
                         <button
                             id="connect-wallet"
                             class="buttonwallet w-button"
-                            onclick="connectComponent()"
+                            onclick="alertConnectWallet()"
                         >
                             Connect Wallet
                         </button>
@@ -204,14 +204,11 @@
                 console.log(counter.textContent);
             });
             //alert on connect wallet click
-            /* function alertConnectWallet() {
+            function alertConnectWallet() {
                 alert("alert ativado!");
-            } */
-
-            function connectComponent() {
-                return connect;
             }
-            console.log(connect);
+
+            
         </script>
     </body>
 </html>

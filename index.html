@@ -22,6 +22,17 @@
                         (n.className += t + "touch");
             })(window, document);
         </script>
+        <script>
+            //mock data of minted values
+            const mockMintedValue = 5555;
+            
+            //mint quantity input value
+            const counter = document.getElementById("counter");
+            console.log(counter); // entire span tag
+            //span value return
+            const counterValue = counter.textContent;
+            console.log(counterValue);
+        </script>
         <link
             href="images/favicon.png"
             rel="shortcut icon"
@@ -63,13 +74,9 @@
                                 class="icon"
                         /></a>
                     </div>
-                    <div
-                        x-data="{ connectValue: mockConnect}"
-                        class="rightupperwrapper"
-                    >
+                    <div class="rightupperwrapper">
                         <a
                             id="connect-wallet"
-                            @click="connectValue"
                             href="#"
                             class="buttonwallet w-button"
                             >Connect Wallet</a
@@ -156,7 +163,7 @@
                             ><strong>+</strong></a
                         >
                         <span
-                            id="counterValue"
+                            id="counter"
                             x-text="count"
                             class="countervalue"
                         ></span>
@@ -194,33 +201,5 @@
         <script src="//unpkg.com/alpinejs" defer></script>
 
         <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-
-        <script>
-            //mint quantity input value
-            const counterValue = document.getElementById("counterValue");
-            //js obj that receives data from ether function and render on minted quantity div x / 5555
-            const mockMintedValue = 5555;
-            //import wallet vars
-            import {
-                moonMoonz,
-                connect,
-                mint,
-                provider,
-                signer,
-            } from "./wallet.js";
-            const mockConnect = connect;
-        </script>
-        <script>
-            //alert on click for dev purposes
-            $(document).ready(function () {
-                /* $("#connect-wallet").click(function () {
-                    alert("clicked");
-                }); */
-
-                $("#buttonMintAction").click(function () {
-                    alert("clicked");
-                });
-            });
-        </script>
     </body>
 </html>

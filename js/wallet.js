@@ -2,7 +2,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 
 const moonMoonz = new ethers.Contract(
-	ADDRESSES.MoonMoonz,
+	ADDRESS.MoonMoonz,
 	ABIS.MoonMoonz,
 	signer
 );

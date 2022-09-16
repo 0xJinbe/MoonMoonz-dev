@@ -3,6 +3,7 @@ const ABIS = {
 		"function claim(uint256) payable",
 		"function claimFree(bytes32[],uint256) payable",
 		"function claimPremint(bytes32[],uint256) payable",
+		"function totalSupply() view returns(uint256)",
 	],
 };
 

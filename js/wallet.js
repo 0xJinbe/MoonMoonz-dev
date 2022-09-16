@@ -7,24 +7,31 @@ const moonMoonz = new ethers.Contract(
 	signer
 );
 
-const connect = async () => {
+// Connect wallet
+async function connect() {
 	await provider.send("eth_requestAccounts", []);
+}
 
-	const addr = await signer.getAddress();
-	$("#connect-wallet").text(addr.substring(0, 9) + "...");
-};
+// Mint `n` tokens
+async function mint(n) {
+	if (!(await getAddress())) return;
+	await moonMoonz.claim(n, { value: PRICE.mul(n) });
+}
 
-const mint = async () => {
-	if (!(await signer.getAddress())) return;
-	await moonMoonz.claim(1, { value: PRICE });
-};
+// Get address if connected else return null
+async function getAddress() {
+	try {
+		return await signer.getAddress();
+	} catch {
+		return null;
+	}
+}
 
-if (window.ethereum) {
-	window.onload = async () => {
-		await connect();
-		provider.on("accountsChanged", () => window.location.reload());
-	};
-
-	$("#connect-wallet").click(connect);
-	$("#buttonMintAction").click(mint);
+// Get totalSupply
+async function getTotalSupply() {
+	try {
+		return await moonMoonz.totalSupply();
+	} catch {
+		return 0;
+	}
 }

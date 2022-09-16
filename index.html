@@ -34,7 +34,7 @@
         <script src="//unpkg.com/alpinejs" defer></script>
         <script src="js/constants.js" type="text/javascript"></script>
         <script src="js/wallet.js" type="text/javascript"></script>
-        
+
         <link
             href="images/favicon.png"
             rel="shortcut icon"
@@ -203,6 +203,7 @@
                     </div>
                     <div class="innerbuttonwrapper">
                         <a
+                            onclick="alertMint()"
                             id="buttonMintAction"
                             href="#"
                             class="buttonmintaction w-button"
@@ -238,7 +239,7 @@
                 console.log(counter.textContent);
             });
             //alert on connect wallet click
-            function alertConnectWallet() {
+            function alertMint() {
                 alert("alert ativado!");
             }
         </script>

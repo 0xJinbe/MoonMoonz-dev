@@ -10,6 +10,7 @@ const moonMoonz = new ethers.Contract(
 // Connect wallet
 async function connect() {
 	await provider.send("eth_requestAccounts", []);
+	
 }
 
 // Mint `n` tokens

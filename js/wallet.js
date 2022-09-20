@@ -1,7 +1,6 @@
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 const signer = provider.getSigner();
 
-
 const moonMoonz = new ethers.Contract(
     ADDRESSES.MoonMoonz,
     ABIS.MoonMoonz,
@@ -12,19 +11,6 @@ const moonMoonz = new ethers.Contract(
 async function connect() {
     await provider.send("eth_requestAccounts", []);
     window.location.reload();
-}
-
-//verify MM connection
-async function isConnected() {
-    const accounts = await ethereum.request({
-        method: "eth_accounts",
-    });
-    if (accounts.length) {
-        console.log(`You're connected to: ${accounts[0]}`);
-        btn.textContent = "CONNECTED";
-    } else {
-        console.log("Metamask is not connected");
-    }
 }
 
 // Mint `n` tokens

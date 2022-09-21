@@ -558,6 +558,14 @@
   text-align: center;
 }
 
+.aboutText {
+  font-family: bmg3, sans-serif;
+  color: hsla(0, 0%, 100%, 0.8);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .homebutton {
   display: -webkit-box;
   display: -webkit-flex;
@@ -723,6 +731,9 @@
 
   .rightupperwrapper {
     padding-right: 10px;
+  }
+  .aboutText {
+    font-size: 1rem;
   }
 
   .icon {

@@ -732,6 +732,7 @@
   .rightupperwrapper {
     padding-right: 10px;
   }
+
   .aboutText {
     font-size: 1rem;
   }
@@ -839,7 +840,14 @@
   }
 
   .homebutton {
-    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px;
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
     left: 0.5vw;
     top: 6vh;
     z-index: 5;
@@ -861,6 +869,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'r8mo';
   src: url('../fonts/MinecraftItalic-R8Mo.otf') format('opentype');
@@ -868,6 +877,7 @@
   font-style: italic;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'nmk1';
   src: url('../fonts/MinecraftBold-nMK1.otf') format('opentype');
@@ -875,6 +885,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: '1y1e';
   src: url('../fonts/MinecraftBoldItalic-1y1e.otf') format('opentype');

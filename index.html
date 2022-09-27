@@ -123,13 +123,13 @@
 								>
 							</div> -->
                             <div class="innerbuttonwrapper">
-								<a
-									id="about-button"
-									href="about.html"
-									class="buttonmarket w-button"
-									>About Us</a
-								>
-							</div>
+                                <a
+                                    id="about-button"
+                                    href="about.html"
+                                    class="buttonmarket w-button"
+                                    >About Us</a
+                                >
+                            </div>
                             <div class="innerbuttonwrapper">
                                 <a
                                     id="market-button"
@@ -223,12 +223,14 @@
             });
         </script>
         <script>
-            //verify if wallet connected
+            //calling events on window load
             window.onload = (event) => {
                 isConnected();
+                getProof();
             };
             let btn = document.getElementById("connect-button");
 
+            //verify if wallet connected
             async function isConnected() {
                 const accounts = await ethereum.request({
                     method: "eth_accounts",
@@ -240,6 +242,21 @@
                     console.log("Metamask is not connected");
                 }
             }
+            //verify if wallet is WL or VIP
+            async function getProof() {
+                const accounts = await ethereum.request({
+                    method: "eth_accounts",
+                });
+                const res = await (
+                    await fetch(
+                        "https://moonmoonz-api.up.railway.app/wl/" + accounts[0]
+                    )
+                ).json();
+
+                console.log(res);
+                
+            }
         </script>
+        <script></script>
     </body>
 </html>

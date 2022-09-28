@@ -207,7 +207,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
+  width: 1000px;
   min-width: auto;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;

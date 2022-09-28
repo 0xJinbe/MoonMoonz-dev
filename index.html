@@ -256,9 +256,10 @@
                         console.error(resWl.error);
                         console.error(resVIP.error);
                         alert("Not VIP or Whitelisted!");
-                    } else {
+                    } else if (resWl.proof) {
                         console.log(resWl.proof);
                         alert("You are whitelisted!");
+                    } else {
                         console.log(resVIP.proof);
                         alert("You are VIP!")
                     }

@@ -252,16 +252,17 @@
                         )
                     ).json();
 
-                    if (resWl.error|| resVIP.error) {
+                    if (resWl.proof) {
+                        console.log(resWl.proof);
+                        alert("You are whitelisted!");
+                        
+                    } else if (resVIP.proof) {
+                        console.log(resVIP.proof);
+                        alert("You are VIP!");
+                    } else {
                         console.error(resWl.error);
                         console.error(resVIP.error);
                         alert("Not VIP or Whitelisted!");
-                    } else if (resWl.proof) {
-                        console.log(resWl.proof);
-                        alert("You are whitelisted!");
-                    } else {
-                        console.log(resVIP.proof);
-                        alert("You are VIP!")
                     }
                 } else {
                     console.log("Metamask is not connected");
